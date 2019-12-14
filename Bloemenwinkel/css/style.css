@@ -1,0 +1,623 @@
+/* Colors */
+html {
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: utopia-std-display, serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: .5rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.3rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p,
+li, a, input, select, label, textarea {
+  font-family: bree, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+p + p {
+  margin: 1rem 0;
+}
+
+.logoLetter {
+  font-family: alana, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Global */
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  background-color: white;
+  height: 7rem;
+  border-bottom: 0.05rem solid #7a7a85;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+}
+
+nav ul {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav ul li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e6999c;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #b4838d;
+}
+
+.wrapper {
+  position: relative;
+  top: 7rem;
+}
+
+footer {
+  background-color: white;
+  color: #7a7a85;
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+footer a {
+  color: #e6999c;
+}
+
+/* Home */
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.05rem solid #7a7a85;
+}
+
+.hero div, .hero article {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.hero .one,
+.hero .two {
+  height: calc(100vh - 7rem);
+}
+
+.hero .one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(181, 131, 141, 0.5)), to(rgba(181, 131, 141, 0.5))), url("../images/bruiloft-boeket.jpg");
+  background: linear-gradient(180deg, rgba(181, 131, 141, 0.5) 0%, rgba(181, 131, 141, 0.5) 100%), url("../images/bruiloft-boeket.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #f2f2f3;
+}
+
+.hero .two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../images/Rose-Petals.svg");
+  background-size: cover;
+  background-position: center;
+  color: #7a7a85;
+}
+
+.hero .two h1 {
+  font-size: 3rem;
+}
+
+.hero .two p.welkom {
+  text-decoration: overline;
+  color: #e6999c;
+  font-size: 2rem;
+}
+
+.features {
+  height: calc(100vh - 7rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #7a7a85;
+  background-color: #f2f2f3;
+  border-bottom: 0.05rem solid #7a7a85;
+}
+
+.features div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  max-width: 20%;
+  max-height: 80vh;
+}
+
+.features div figure img {
+  width: 100%;
+  border: 0.5rem solid white;
+  -webkit-box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+          box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+}
+
+.features div a.blog-title {
+  text-decoration: underline;
+  color: inherit;
+  line-height: 3rem;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.features div a.blog-title:hover {
+  color: #e6999c;
+}
+
+.features div p {
+  margin-bottom: 2.5rem;
+}
+
+.producten {
+  height: calc(100vh - 7rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #f2f2f3;
+  background-color: #7a7a85;
+  border-bottom: 0.05rem solid #7a7a85;
+}
+
+.producten h2 {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  color: #f2f2f3;
+}
+
+.producten div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  max-width: 20%;
+}
+
+.producten div figure img {
+  width: 100%;
+  border: 0.5rem solid white;
+  -webkit-box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+          box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+}
+
+.producten div a.blog-title {
+  text-decoration: underline;
+  color: inherit;
+  line-height: 3rem;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.producten div a.blog-title:hover {
+  color: #e6999c;
+}
+
+.producten div p {
+  margin-bottom: 2.5rem;
+}
+
+.info {
+  height: calc(100vh - 7rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #7a7a85;
+  background-color: #f5d6d7;
+  padding: 5rem;
+  border-bottom: 0.05rem solid #7a7a85;
+}
+
+.info div, .info article {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.info div.shop {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(181, 131, 141, 0.5)), to(rgba(181, 131, 141, 0.5))), url("../images/shop.jpg");
+  background: linear-gradient(180deg, rgba(181, 131, 141, 0.5) 0%, rgba(181, 131, 141, 0.5) 100%), url("../images/shop.jpg");
+  background-size: cover;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem #7a7a85;
+          box-shadow: 0.5rem 0.5rem 1rem #7a7a85;
+  border-top: 0.5rem solid white;
+  border-right: 0.5rem solid white;
+  border-bottom: 0.5rem solid white;
+}
+
+.info div.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../images/Rose-Petals.svg");
+  background-size: cover;
+  background-position: center;
+  color: #7a7a85;
+  height: 100%;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem #7a7a85;
+          box-shadow: 0.5rem 0.5rem 1rem #7a7a85;
+  border-top: 0.5rem solid white;
+  border-left: 0.5rem solid white;
+  border-bottom: 0.5rem solid white;
+}
+
+.info div.contact h1 {
+  font-size: 3rem;
+}
+
+.info div.contact p.welkom {
+  text-decoration: overline;
+  color: #e6999c;
+  font-size: 2rem;
+}
+
+.info div.contact #contact {
+  margin: 1rem 0;
+}
+
+.info div.contact #contact label {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.info div.contact #contact textarea {
+  border: 0.05rem solid #7a7a85;
+  width: 100%;
+  border-radius: 1rem;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #e6999c;
+}
+
+.info div.contact #contact input.inp {
+  width: 100%;
+  padding: .5rem;
+  display: block;
+  border: 0.05rem solid #7a7a85;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  height: 2rem;
+  color: #e6999c;
+}
+
+.info div.contact #contact input.verzenden {
+  display: block;
+  text-decoration: none;
+  color: #f2f2f3;
+  background-color: #e6999c;
+  padding: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-top: 2.5rem;
+  border: none;
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+}
+
+.info div.contact #contact input.verzenden:hover {
+  color: #f2f2f3;
+  background-color: #7a7a85;
+}
+
+/* Bloemen page */
+.bloemen {
+  padding: 5rem 0;
+  border-bottom: 0.05rem solid #7a7a85;
+  background: url("../images/Subtle-Stripes.svg");
+  background-size: auto;
+}
+
+.bloemen .bloemen-rij {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 2rem 0;
+  color: #7a7a85;
+}
+
+.bloemen .bloemen-rij div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.33%;
+          flex: 1 1 33.33%;
+  max-width: 30%;
+}
+
+.bloemen .bloemen-rij div a.blog-title {
+  text-decoration: underline;
+  color: inherit;
+  line-height: 3rem;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.bloemen .bloemen-rij div a.blog-title:hover {
+  color: #e6999c;
+}
+
+.bloemen .bloemen-rij div figure img {
+  width: 100%;
+  border: 0.5rem solid white;
+  -webkit-box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+          box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+}
+
+.bloemen .bloemen-rij div i {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
+/* Blog */
+.blog-post {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "post post product";
+  padding: 5rem 2.5rem;
+  color: #7a7a85;
+}
+
+.blog-post header {
+  width: 50%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: post;
+}
+
+.blog-post header h2, .blog-post header h3 {
+  color: #e6999c;
+}
+
+.blog-post header ol {
+  margin: 1rem 0 1rem 2rem;
+}
+
+.blog-post header img {
+  margin: 1rem 0;
+}
+
+.blog-post .prod {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: product;
+}
+
+.blog-post .prod h4 {
+  text-decoration: overline;
+  color: #e6999c;
+  margin-bottom: 1rem;
+}
+
+.blog-post .prod .collection {
+  color: #e6999c;
+  font-weight: bold;
+}
+
+.blog-post .prod .spacer {
+  margin-bottom: 2.5rem;
+}
+
+.blog-post figure img {
+  width: 50vw;
+  border: 0.5rem solid white;
+  -webkit-box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+          box-shadow: 0rem 0.1rem 0.5rem #7a7a85;
+}
+
+.blog-post figure .product {
+  width: 50%;
+  margin-bottom: 2.5rem;
+}
+
+/* classes */
+.cta {
+  text-decoration: none;
+  color: #f2f2f3;
+  background-color: #e6999c;
+  padding: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-top: 2.5rem;
+}
+
+.cta:hover {
+  color: #f2f2f3;
+  background-color: #7a7a85;
+}
+
+.cta-reverse {
+  text-decoration: none;
+  color: #e6999c;
+  background-color: #f2f2f3;
+  padding: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-top: 2.5rem;
+}
+
+.cta-reverse:hover {
+  color: #f2f2f3;
+  background-color: #e6999c;
+}
+
+.titleheading {
+  text-align: center;
+  text-decoration: overline;
+  color: #e6999c;
+}
+/*# sourceMappingURL=style.css.map */

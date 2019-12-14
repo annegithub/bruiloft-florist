@@ -1,0 +1,385 @@
+@import "variables";
+@import "typography";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global */
+
+nav {
+    @include flex-row;
+    width: 100vw;
+    background-color: $ultra-white;
+    height: 7rem;
+    border-bottom: $border;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+
+    ul {
+        width: 80%;
+        @include flex-row;
+        justify-content: space-around;
+
+        li {
+            display: inline-block;
+            text-decoration: none;
+
+            a {
+                text-decoration: none;
+                color: $pink;
+                transition: color 0.5s ease-in-out;
+
+                &:hover {
+                    color: $dark-pink;
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+    top: 7rem;
+}
+
+footer {
+    background-color: $ultra-white;
+    color: $grey;
+    text-align: center;
+    padding: 2.5rem 0;
+
+    a {
+        color: $pink;
+    }
+}
+
+/* Home */
+
+.hero {
+    @include flex-two-cols;
+    border-bottom: $border;
+
+
+    .one,
+    .two {
+        height: calc(100vh - 7rem);
+    }
+
+    .one {
+        @include flex-col;
+        background: linear-gradient(180deg, rgba(181, 131, 141, .5) 0%, rgba(181, 131, 141, .5) 100%), url('../images/bruiloft-boeket.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $white;
+
+    }
+
+    .two {
+        @include flex-col;
+        background: url('../images/Rose-Petals.svg');
+        background-size: cover;
+        background-position: center;
+        color: $grey;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p.welkom {
+            text-decoration: overline;
+            color: $pink;
+            font-size: 2rem;
+        }
+    }
+}
+
+.features {
+    height: calc(100vh - 7rem);
+    @include flex-row;
+    justify-content: space-evenly;
+    color: $grey;
+    background-color: $white;
+    border-bottom: $border;
+
+    div {
+        flex: 1 1 20%;
+        max-width: 20%;
+        max-height: 80vh;
+
+        figure {
+            img {
+                width: 100%;
+                border: 0.5rem solid $ultra-white;
+                box-shadow: 0rem 0.1rem 0.5rem $grey;
+            }
+        }
+
+        a.blog-title {
+            text-decoration: underline;
+            color: inherit;
+            line-height: 3rem;
+            transition: color 0.5s ease-in-out;
+
+            &:hover {
+                color: $pink;
+            }
+        }
+
+        p {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.producten {
+    height: calc(100vh - 7rem);
+    @include flex-row;
+    justify-content: space-evenly;
+    color: $white;
+    background-color: $grey;
+    border-bottom: $border;
+
+    h2 {
+        order: 4;
+        color: $white;
+    }
+
+    div {
+        flex: 1 1 20%;
+        max-width: 20%;
+
+        figure {
+            img {
+                width: 100%;
+                border: 0.5rem solid $ultra-white;
+                box-shadow: 0rem 0.1rem 0.5rem $grey;
+            }
+        }
+
+        a.blog-title {
+            text-decoration: underline;
+            color: inherit;
+            line-height: 3rem;
+            transition: color 0.5s ease-in-out;
+
+            &:hover {
+                color: $pink;
+            }
+        }
+
+        p {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.info {
+    height: calc(100vh - 7rem);
+    @include flex-two-cols;
+    justify-content: space-evenly;
+    color: $grey;
+    background-color: $pink-light;
+    padding: 5rem;
+    border-bottom: $border;
+
+    div.shop {
+        height: 100%;
+        background: linear-gradient(180deg, rgba(181, 131, 141, .5) 0%, rgba(181, 131, 141, .5) 100%), url('../images/shop.jpg');
+        background-size: cover;
+        box-shadow: .5rem .5rem 1rem $grey;
+        border-top: 0.5rem solid $ultra-white;
+        border-right: 0.5rem solid $ultra-white;
+        border-bottom: 0.5rem solid $ultra-white;
+
+    }
+
+    div.contact {
+        @include flex-col;
+        background: url('../images/Rose-Petals.svg');
+        background-size: cover;
+        background-position: center;
+        color: $grey;
+        height: 100%;
+        box-shadow: .5rem .5rem 1rem $grey;
+        border-top: 0.5rem solid $ultra-white;
+        border-left: 0.5rem solid $ultra-white;
+        border-bottom: 0.5rem solid $ultra-white;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p.welkom {
+            text-decoration: overline;
+            color: $pink;
+            font-size: 2rem;
+        }
+
+        #contact {
+            margin: 1rem 0;
+
+            label {
+                display: block;
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+
+            textarea {
+                border: $border;
+                width: 100%;
+                border-radius: 1rem;
+                padding: .5rem;
+                text-align: center;
+                font-size: 1rem;
+                color: $pink;
+            }
+
+            input.inp {
+                width: 100%;
+                padding: .5rem;
+                display: block;
+                border: $border;
+                border-radius: 1rem;
+                text-align: center;
+                font-size: 1rem;
+                height: 2rem;
+                color: $pink;
+            }
+
+            input.verzenden {
+                display: block;
+                @include cta-button;
+                border: none;
+                margin: 1rem auto 0 auto;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+
+/* Bloemen page */
+
+.bloemen {
+    padding: 5rem 0;
+    border-bottom: $border;
+    background: url('../images/Subtle-Stripes.svg');
+    background-size: auto;
+
+    .bloemen-rij {
+        @include flex-row;
+        justify-content: space-evenly;
+        margin: 2rem 0;
+        color: $grey;
+
+        div {
+            flex: 1 1 33.33%;
+            max-width: 30%;
+
+            a.blog-title {
+                text-decoration: underline;
+                color: inherit;
+                line-height: 3rem;
+                transition: color 0.5s ease-in-out;
+
+                &:hover {
+                    color: $pink;
+                }
+            }
+
+            figure {
+                img {
+                    width: 100%;
+                    border: 0.5rem solid $ultra-white;
+                    box-shadow: 0rem 0.1rem 0.5rem $grey;
+                }
+            }
+
+            i {
+                transform: translateY(25%);
+            }
+        }
+    }
+}
+
+/* Blog */
+
+.blog-post {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "post post product";
+    padding: 5rem 2.5rem;
+    color: $grey;
+
+    header {
+        width: 50%;
+        grid-area: post;
+
+        h2, h3 {
+            color: $pink;
+        }
+
+        ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        img {
+            margin: 1rem 0;
+        }
+    }
+
+    .prod {
+        grid-area: product;
+
+        h4 {
+            text-decoration: overline;
+            color: $pink;
+            margin-bottom: 1rem;
+        }
+
+        .collection {
+            color: $pink;
+            font-weight: bold;
+        }
+
+        .spacer {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    figure {
+        img {
+            width: 50vw;
+            border: 0.5rem solid $ultra-white;
+            box-shadow: 0rem 0.1rem 0.5rem $grey;
+        }
+
+        .product {
+            width: 50%;
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+/* classes */
+
+.cta {
+    @include cta-button;
+}
+
+.cta-reverse {
+    @include cta-reverse;
+}
+
+.titleheading {
+    text-align: center;
+    text-decoration: overline;
+    color: $pink;
+}

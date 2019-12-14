@@ -1,0 +1,51 @@
+@mixin flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-two-cols {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    div, article {
+        flex: 1 1 50%;
+    }
+}
+
+@mixin cta-button {
+    text-decoration: none;
+    color: $white;
+    background-color: $pink;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+    margin-top: 2.5rem;
+
+    &:hover {
+        color: $white;
+        background-color: $grey;
+    }
+}
+
+@mixin cta-reverse {
+    text-decoration: none;
+    color: $pink;
+    background-color: $white;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+    margin-top: 2.5rem;
+
+    &:hover {
+        color: $white;
+        background-color: $pink;
+    }
+}

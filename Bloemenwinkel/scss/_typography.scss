@@ -1,0 +1,55 @@
+html {
+    font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: utopia-std-display, serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: .5rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+p,
+li, a, input, select, label, textarea {
+    font-family: bree, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+p {
+    line-height: 1.6rem;
+}
+
+p + p {
+    margin: 1rem 0;
+}
+
+
+.logoLetter {
+    font-family: alana, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+}
